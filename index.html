@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="btn" onclick="quote()">click me for quotation</button>
+    <h2 id="h2"></h2>
+   <script>
+      function quote (){
+        const x =[
+         "Code is like humor, if you have to explain it, it's bad." ,
+ "The best way to predict the future is to invent it." ,
+ "Software is eating the world.",
+ "Programming is not just writing code, it's problem-solving." ,
+ "The only way to do great work is to love what you do." ,
+ "Code quality is not just about syntax, it's about readability.",
+ "The best software is the one that solves a real problem.",
+"Don't just learn to code, learn to think." ,
+"The biggest risk is not taking any risk." ,
+ "Software development is a team sport.",
+ "The only constant in software development is change.",
+ "Code reviews are essential for quality and learning." ,
+ "Debugging is like being a detective, find the clue and solve the crime.",
+ "The best code is the code that doesn't need to be written." ,
+ "Software development is an art, not just a science." ,
+  "Learn by doing, not just by reading.",
+ "The biggest mistake is not trying." ,
+ "Code with passion, not just for fashion." ,
+"Software development is a journey, not a destination." ,
+ "The best software is the one that makes a difference." ,
+
+        ];
+        
+        quotation=x[Math.floor(Math.random() * x.length)];
+        let h2=document.getElementById("h2");
+        h2.innerHTML=quotation;
+        let btn = document.getElementById("btn");
+    
+
+      }
+      let btn = document.getElementById("btn");
+      btn.style.height = "100px";
+      btn.style.fontFamily = "arail";
+      btn.style.fontStyle = "italic";
+      btn.style.background="aqua";
+      btn.style.fontSize = "30px";
+
+
+      
+      function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+document.addEventListener('click', function() {
+ 
+  document.body.style.backgroundColor = getRandomColor();
+});
+
+
+      
+   </script>
+</body>
+</html>
